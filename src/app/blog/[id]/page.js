@@ -10,8 +10,8 @@ export default async function page(props) {
 
   return (
     <>
-      <section className="mt-24">
-        <div className="border p-8 shadow-sm rounded-xl max-w-2xl mx-auto mt-4">
+      <section className="mt-24 mx-4">
+        <div className="border p-3 md:p-8 shadow-sm rounded-xl max-w-2xl mx-auto mt-4">
           <h1 className="text-xl font-bold mb-2 md:text-3xl ">{data?.title}</h1>
           <p className="">{data?.body}</p>
         </div>

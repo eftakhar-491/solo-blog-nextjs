@@ -1,5 +1,5 @@
 import Blogs from "@/components/Blogs";
-import Loading from "@/components/Loading";
+
 import axios from "axios";
 async function fetchBlogs() {
   const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
@@ -13,7 +13,7 @@ export default async function Home() {
     <>
       <section>
         <h1 className="text-center mt-4 text-3xl font-semibold">All Blogs</h1>
-        <p className="text-sm max-w-[500px] mx-auto text-center mt-1">
+        <p className="px-4 text-sm max-w-[500px] mx-auto text-center mt-1">
           Explore insightful blogs on a variety of topics, crafted to inspire
           and inform. Stay updated with the latest trends and ideas all in one
           place!

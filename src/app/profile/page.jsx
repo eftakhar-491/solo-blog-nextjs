@@ -1,9 +1,9 @@
-import React from "react";
 import { redirect } from "next/navigation";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import TypeEffect from "@/components/TypeEffect";
-import Loading from "@/components/Loading";
-
+export const metadata = {
+  title: "Profile | Solo Blogs",
+};
 export default async function page() {
   const { isAuthenticated, getUser } = getKindeServerSession();
 
@@ -11,8 +11,6 @@ export default async function page() {
   const user = await getUser();
 
   if (!isUserAuthenticated) {
-    console.log(isUserAuthenticated);
-
     return redirect(
       `/api/auth/login?${process.env.KINDE_POST_LOGIN_REDIRECT_URL}=/profile`
     );
@@ -24,7 +22,7 @@ export default async function page() {
         <p className="text-xl pb-4 font-medium text-gray-700">
           <TypeEffect>Welcome to your profile!</TypeEffect>
         </p>
-        <div className="flex flex-row items-center space-x-4">
+        <div className="flex flex-col md:flex-row items-center space-x-4">
           <div className="w-[180px] h-[180px] rounded-full border-2">
             <img
               className="w-full h-full rounded-full object-cover"
