@@ -17,7 +17,7 @@ export default async function page() {
       `/api/auth/login?${process.env.KINDE_POST_LOGIN_REDIRECT_URL}=/profile`
     );
   }
-  console.log(user);
+
   return (
     <>
       <section className="flex-col min-h-[80vh] flex items-center justify-center">
