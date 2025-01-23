@@ -1,4 +1,5 @@
 import Blogs from "@/components/Blogs";
+import Loading from "@/components/Loading";
 import axios from "axios";
 async function fetchBlogs() {
   const res = await axios.get("https://jsonplaceholder.typicode.com/posts");

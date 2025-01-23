@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 export default async function Nav() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  console.log(user);
+
   return (
     <>
       <nav>
@@ -36,7 +36,7 @@ export default async function Nav() {
                 </>
               ) : (
                 <LogoutLink>
-                  <Button variant="outline">Log out</Button>
+                  <Button variant="outline">Logout</Button>
                 </LogoutLink>
               )}
             </div>
