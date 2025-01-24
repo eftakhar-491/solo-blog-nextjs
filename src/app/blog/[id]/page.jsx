@@ -3,7 +3,7 @@ import React from "react";
 
 export default async function page(props) {
   const { id } = await props.params;
-  console.log(id);
+
   const { data } = await axios.get(
     `https://jsonplaceholder.typicode.com/posts/${id}`
   );
